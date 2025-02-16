@@ -1,0 +1,365 @@
+body {
+     margin: 0;
+     font-family: 'Segoe UI', sans-serif;
+     background-color: black;
+     color: #ffffff;
+ }
+
+ header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background-color: #490000;
+  border-bottom: #ff5353 1px solid;
+  user-select: none;
+  -webkit-user-select: none; /* Para navegadores basados en WebKit (Chrome, Safari, etc.) */
+  -moz-user-select: none;    /* Para Firefox */
+  -ms-user-select: none;
+}
+
+header a{
+  text-decoration: none; /* Quita el subrayado del enlace */
+  color: inherit;        /* Hace que el enlace herede el color del texto del <h1> */
+}
+
+header h1{
+  cursor: pointer;
+  font-size: 24px;
+  margin-left: 8px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo-container img {
+  width: 48px; /* Tamaño del logo */
+  margin-right: 10px;
+}
+
+.header-socials{
+  display: flex;
+  flex-direction: column;  /* Hace que el título y los íconos estén en columna */
+  align-items: center;  /* Centra todo en el contenedor */
+}
+
+.header-socials ul {
+  display: flex;
+  gap: 32px; /* Espacio entre los íconos */
+  align-items: center; /* Alinea los íconos verticalmente */
+  list-style: none; /* Elimina los puntos */
+}
+
+.header-socials i {
+  font-size: 32px; /* Tamaño de los íconos */
+  color: #ffffff;
+}
+
+.header-socials i:hover{
+  color: #ff0000;
+}
+
+@media (max-width: 768px) {
+  header {
+    text-align: center;
+  }
+
+  .logo-container {
+    margin-bottom: 10px;
+  }
+
+  .header-socials ul {
+    display: flex;
+    gap: 24px; /* Espacio entre los íconos */
+    align-items: center; /* Alinea los íconos verticalmente */
+    list-style: none; /* Elimina los puntos */
+  }
+  
+  .header-socials i {
+    font-size: 24px; /* Tamaño de los íconos */
+    color: #ffffff;
+  }
+
+}
+
+main{
+    justify-items: center;
+    align-items: center;
+    color: #ffffff;
+    padding: 2rem 1rem;
+}
+
+#titlesh2{
+  margin: 32px;
+  font-size: 1rem;
+  text-align: center;
+}
+.flex-container {
+  background-color: #1b1b1b;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid  #3a3a3a;
+  border-radius: 24px;
+  max-width: 800px;
+  margin: 24px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none; /* Para navegadores basados en WebKit (Chrome, Safari, etc.) */
+  -moz-user-select: none;    /* Para Firefox */
+  -ms-user-select: none;
+}
+
+.flex-container:hover{
+  background-color: #000000;
+  border: 1px solid  #ff0000;
+}
+
+.flex-container img {
+  max-width: 364px;
+  border-radius: 24px;
+}
+
+.flex-container .text-content {
+  flex: 1;
+  padding: 0;
+}
+
+.flex-container h1 {
+  margin: 10px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.flex-container p {
+  margin: 10px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .flex-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 0;
+  }
+
+  .flex-container img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 8px;
+  }
+
+  .flex-container .text-content {
+      padding: 5px;
+  }
+}
+
+.articles-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .articles-section {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .articles-section {
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.container h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.arrow {
+  margin-left: 24px;
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #ff0000;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.arrow:hover {
+  transform: translateX(5px);
+}
+
+article {
+  background-color: #1b1b1b;
+  border: 1px solid  #3a3a3a;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none; /* Para navegadores basados en WebKit (Chrome, Safari, etc.) */
+  -moz-user-select: none;    /* Para Firefox */
+  -ms-user-select: none;     /* Para navegadores antiguos de Microsoft */
+}
+
+article:hover{
+  border: 1px solid  #ff0000;
+  background-color: #000000;
+}
+
+.article-image-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.article-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.article-content {
+  padding: 1.5rem;
+}
+
+.article-content h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+
+.article-content p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.title2{
+    margin: 36px;
+}
+
+/* Estilos generales para el footer */
+.footer {
+    background-color: #490000;
+    padding: 20px 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-top: #ff5353 1px solid;
+  }
+  
+  /* Contenedor principal del footer */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  
+  /* Sección de información con logo y párrafo */
+  .footer-info {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    margin: 12px;
+  }
+  
+  .footer-logo {
+    width: 64px;  /* Ajusta el tamaño del logo */
+    margin-bottom: 15px;
+    user-select: none;
+    -webkit-user-select: none; /* Para navegadores basados en WebKit (Chrome, Safari, etc.) */
+    -moz-user-select: none;    /* Para Firefox */
+    -ms-user-select: none;     /* Para navegadores antiguos de Microsoft */
+  }
+  
+  /* Estilos para las secciones legales */
+  .footer-legal, .footer-socials {
+    flex: 1;
+  }
+  
+  /* Estilo de los títulos de las secciones */
+  .footer h3 {
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo para las listas */
+  .footer ul {
+    margin: 0px;
+    list-style-type: none;
+    user-select: none;
+    padding: 0;
+    -webkit-user-select: none; /* Para navegadores basados en WebKit (Chrome, Safari, etc.) */
+    -moz-user-select: none;    /* Para Firefox */
+    -ms-user-select: none;     /* Para navegadores antiguos de Microsoft */
+  }
+  
+  .footer ul li {
+    color: #ffffff;
+    margin: 0px 0px 16px 0;
+  }
+  
+  /* Estilo para los enlaces */
+  .footer a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilo para los enlaces de redes sociales */
+  .footer-socials {
+    display: flex;
+    flex-direction: column;  /* Hace que el título y los íconos estén en columna */
+    align-items: center;  /* Centra todo en el contenedor */
+  }
+  
+  .footer-socials ul {
+    display: flex;
+    gap: 32px; /* Espacio entre los íconos */
+    align-items: center; /* Alinea los íconos verticalmente */
+    list-style: none; /* Elimina los puntos */
+    margin: 24px;
+
+  }
+  
+  .footer-socials i {
+    font-size: 32px; /* Tamaño de los íconos */
+    color: #ffffff;
+  }
+
+  .footer-socials i:hover{
+    color: #ff0000;
+  }
+  
+  
+  
+  /* Media Queries para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .footer-info, .footer-legal, .footer-socials {
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  

@@ -1,0 +1,285 @@
+body {
+     margin: 0;
+     font-family: 'Segoe UI', sans-serif;
+     background-color: black;
+     color: #ffffff;
+ }
+
+ header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background-color: #490000;
+  border-bottom: #ff5353 1px solid;
+  user-select: none;
+  -webkit-user-select: none; /* Para navegadores basados en WebKit (Chrome, Safari, etc.) */
+  -moz-user-select: none;    /* Para Firefox */
+  -ms-user-select: none;     /* Para navegadores antiguos de Microsoft */
+}
+
+header a{
+  text-decoration: none; /* Quita el subrayado del enlace */
+  color: inherit;        /* Hace que el enlace herede el color del texto del <h1> */
+}
+
+header h1{
+  font-size: 24px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo-container img {
+  width: 48px; /* Tamaño del logo */
+  margin-right: 10px;
+}
+
+.header-socials{
+  display: flex;
+  flex-direction: column;  /* Hace que el título y los íconos estén en columna */
+  align-items: center;  /* Centra todo en el contenedor */
+}
+
+.header-socials ul {
+  display: flex;
+  gap: 32px; /* Espacio entre los íconos */
+  align-items: center; /* Alinea los íconos verticalmente */
+  list-style: none; /* Elimina los puntos */
+}
+
+.header-socials i {
+  font-size: 32px; /* Tamaño de los íconos */
+  color: #ffffff;
+}
+
+.header-socials i:hover{
+  color: #ff0000;
+}
+
+@media (max-width: 768px) {
+  header {
+    text-align: center;
+  }
+
+  .logo-container {
+    margin-bottom: 10px;
+  }
+
+  .header-socials ul {
+    display: flex;
+    gap: 24px; /* Espacio entre los íconos */
+    align-items: center; /* Alinea los íconos verticalmente */
+    list-style: none; /* Elimina los puntos */
+  }
+  
+  .header-socials i {
+    font-size: 24px; /* Tamaño de los íconos */
+    color: #ffffff;
+  }
+
+}
+
+main{
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  padding: 32px;
+}
+
+.card {
+  background-color: #1b1b1b;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border: 1px solid  #3a3a3a;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+#question-title {
+  margin: 5px;
+  font-size: 24px;
+}
+#question-count {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 10px;
+}
+.question-image {
+  width: 94%;
+  object-fit: cover;
+  border-radius: 24px;
+  margin: 16px;
+}
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.option {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+.option:hover {
+  background: #2563eb;
+}
+.option.disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+.note {
+  margin-top: 16px;
+  font-size: 16px;
+  color: #374151;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: 15px;
+}
+.button-secondary {
+  background: #e5e7eb;
+  color: #374151;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+.button-secondary:hover {
+  background: #d1d5db;
+}
+.button-secondary.disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Estilos generales para el footer */
+.footer {
+    background-color: #490000;
+    padding: 20px 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-top: #ff5353 1px solid;
+  }
+  
+  /* Contenedor principal del footer */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  
+  /* Sección de información con logo y párrafo */
+  .footer-info {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    margin: 12px;
+  }
+  
+  .footer-logo {
+    width: 64px;  /* Ajusta el tamaño del logo */
+    margin-bottom: 15px;
+    user-select: none;
+    -webkit-user-select: none; /* Para navegadores basados en WebKit (Chrome, Safari, etc.) */
+    -moz-user-select: none;    /* Para Firefox */
+    -ms-user-select: none;     /* Para navegadores antiguos de Microsoft */
+  }
+  
+  /* Estilos para las secciones legales */
+  .footer-legal, .footer-socials {
+    flex: 1;
+  }
+  
+  /* Estilo de los títulos de las secciones */
+  .footer h3 {
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo para las listas */
+  .footer ul {
+    margin: 0px;
+    list-style-type: none;
+    user-select: none;
+    padding: 0;
+    -webkit-user-select: none; /* Para navegadores basados en WebKit (Chrome, Safari, etc.) */
+    -moz-user-select: none;    /* Para Firefox */
+    -ms-user-select: none;     /* Para navegadores antiguos de Microsoft */
+  }
+  
+  .footer ul li {
+    color: #ffffff;
+    margin: 0px 0px 16px 0;
+  }
+  
+  /* Estilo para los enlaces */
+  .footer a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilo para los enlaces de redes sociales */
+  .footer-socials {
+    display: flex;
+    flex-direction: column;  /* Hace que el título y los íconos estén en columna */
+    align-items: center;  /* Centra todo en el contenedor */
+  }
+  
+  .footer-socials ul {
+    display: flex;
+    gap: 32px; /* Espacio entre los íconos */
+    align-items: center; /* Alinea los íconos verticalmente */
+    list-style: none; /* Elimina los puntos */
+    margin: 24px;
+
+  }
+  
+  .footer-socials i {
+    font-size: 32px; /* Tamaño de los íconos */
+    color: #ffffff;
+  }
+
+  .footer-socials i:hover{
+    color: #ff0000;
+  }
+  
+  
+  
+  /* Media Queries para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .footer-info, .footer-legal, .footer-socials {
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  
